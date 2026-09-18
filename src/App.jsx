@@ -1,5 +1,6 @@
 import './App.css'
-import { Palette, Grid2X2, Globe } from "lucide-react";
+import { Palette, Grid2X2, Globe, ArrowRight, ArrowUp } from "lucide-react";
+
 function App() {
   return (
     <>
@@ -17,8 +18,9 @@ function App() {
         </div>
 
         <a href="#contact" className="start-button">
-          START PROJECT ↗️
-        </a>
+  START PROJECT
+  <ArrowRight size={18} />
+</a>
       </nav>
 
 
@@ -181,8 +183,10 @@ function App() {
               <li>Art Direction</li>
             </ul>
 
-            <a href="#contact">DISCUSS PROJECT ↗️</a>
-
+<a href="#contact" className="discuss-project">
+  DISCUSS PROJECT
+  <ArrowRight size={18} />
+</a>
           </div>
 
 
@@ -208,8 +212,10 @@ function App() {
               <li>Design Systems</li>
             </ul>
 
-            <a href="#contact">DISCUSS PROJECT ↗️</a>
-
+            <a href="#contact" className="discuss-project">
+  DISCUSS PROJECT
+  <ArrowRight size={18} />
+</a>
           </div>
 
 
@@ -234,8 +240,10 @@ function App() {
               <li>CMS Solutions</li>
             </ul>
 
-            <a href="#contact">DISCUSS PROJECT ↗️</a>
-
+           <a href="#contact" className="discuss-project">
+  DISCUSS PROJECT
+  <ArrowRight size={18} />
+</a>
           </div>
 
         </div>
@@ -291,29 +299,37 @@ function App() {
 
 
         {/* CONTACT FORM */}
-        <form className="contact-form">
-
+        <form
+  className="contact-form"
+  action="https://formspree.io/f/mbglljyj"
+  method="POST"
+>
           <label>YOUR NAME *</label>
           <input
             type="text"
+            name="name"
+
             placeholder="e.g. Eleanor Vance"
           />
 
           <label>EMAIL ADDRESS *</label>
           <input
             type="email"
+            name="email"
             placeholder="e.g. eleanor@example.com"
           />
 
           <label>PROJECT BRIEF OR MESSAGE *</label>
           <textarea
+          name="message"
             placeholder="Tell us about your brand, project goals, timeline, and scope..."
             rows="6"
           ></textarea>
 
-          <button type="submit">
-            SEND MESSAGE ↗️
-          </button>
+         <button type="submit" className="send-btn">
+  <span>SEND MESSAGE</span>
+  <ArrowRight size={18} className="send-arrow" />
+</button>
 
         </form>
 
@@ -363,7 +379,7 @@ function App() {
   className="back-to-top"
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 >
-  ↑
+  <ArrowUp size={18}/>
 </button>
 
     </>
